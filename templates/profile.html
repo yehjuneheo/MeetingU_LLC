@@ -1,0 +1,14 @@
+<div class="prof">  
+        <h3 style="color:blue;">{{profiles.name}}</h3>
+        <h4>{{profiles.university}}</h4>
+        <h4>{{profiles.major}}</h4>
+</div>
+
+<div>
+        <input type="submit" value = "Go Reserve" onclick="location.href='{% url 'confirm_reservation' profiles.id %}'" />
+</div>
+
+<div>
+        <input type="submit" value = "Go Home" onclick="location.href='{% url 'home' %}'" />
+</div>
+

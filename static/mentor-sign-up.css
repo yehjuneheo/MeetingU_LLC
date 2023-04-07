@@ -1,0 +1,262 @@
+/* screen - mentor-sign-up */
+
+.mentor-sign-up {
+  align-items: flex-start;
+  background-image: url(../img/mentor-sign-up.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border: 1px none;
+  display: flex;
+  gap: 486px;
+  height: 2494px;
+  width: 1440px;
+}
+
+.mentor-sign-up .flex-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 43px;
+  min-height: 2365px;
+  width: 575px;
+}
+
+.mentor-sign-up .title {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 32px;
+  text-align: center;
+  width: 575px;
+}
+
+.mentor-sign-up .line-7 {
+  height: 1px;
+  margin-left: 23.0px;
+  margin-top: 24px;
+  object-fit: cover;
+  width: 478px;
+}
+
+.mentor-sign-up .frame {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 23.0px;
+  margin-top: 24px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .rectangle {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-2);
+  border-radius: 5px;
+  height: 40px;
+  min-width: 400px;
+  position: relative;
+}
+
+.mentor-sign-up .university {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .frame-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 23.0px;
+  margin-top: 12px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .university-email {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .frame-55 {
+  height: 70px;
+  margin-left: 23.0px;
+  margin-top: 12px;
+  width: 400px;
+}
+
+.mentor-sign-up .minor-select-all {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .current-education-level {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .available-timelines {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .rectangle-30 {
+  height: 130px;
+  min-width: 400px;
+}
+
+.mentor-sign-up .frame-59 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-right: 172.0px;
+  margin-top: 12px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .upload-profile-picture {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .rectangle-31 {
+  height: 40px;
+  min-width: 161px;
+}
+
+.mentor-sign-up .brief-introduction-about-yourself {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .rectangle-3 {
+  height: 164px;
+  min-width: 400px;
+}
+
+.mentor-sign-up .optional-linked-profile-link {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .optional-additional-information {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .frame-69 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-left: 23.0px;
+  margin-top: 12px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .setup-bank-account {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .rectangle-36 {
+  height: 291px;
+  min-width: 400px;
+}
+
+.mentor-sign-up .overlap-group {
+  align-items: center;
+  background-color: var(--shamrock);
+  border-radius: 20px;
+  display: flex;
+  height: 67px;
+  justify-content: flex-end;
+  margin-left: 13.0px;
+  margin-top: 38px;
+  min-width: 328px;
+  padding: 0 55px;
+}
+
+.mentor-sign-up .register-as-mentor {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 24.9px;
+  text-align: center;
+  white-space: nowrap;
+  width: 210px;
+}
+
+.mentor-sign-up .frame-48 {
+  align-items: flex-start;
+  display: flex;
+  gap: 13px;
+  margin-left: 12.0px;
+  margin-top: 58px;
+  position: relative;
+  width: fit-content;
+}
+
+.mentor-sign-up .already-have-an-account {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.mentor-sign-up .login-now {
+  color: #1511e7;
+  font-family: var(--font-family-open_sans);
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  width: fit-content;
+}
+
+.mentor-sign-up .rectangle-1 {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-2);
+  border-radius: 5px;
+  position: relative;
+}

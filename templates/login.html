@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        TBD
+    </title>
+
+    <link rel="stylesheet" href="{% static 'styleguide.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="login screen">
+        <div class="frame-30">
+            <div class="frame-25">
+                <h1 class="title">Login to your Account</h1>
+                <img class="line-3" src="{% static 'line.png' %}" alt="Line 3" />
+            </div>
+            <div class="frame-40">
+                {% for message in messages %}
+                <h5>{{message}}</h5>
+                {% endfor %}
+                <form method="POST" action="login" class="form">
+                    {% csrf_token %}
+                    <div class="frame-26">
+                        <div class="username opensans-semi-bold-black-17px">
+                            Username
+                        </div>
+                        <input type="text" name="username" class="rectangle-1"/>
+                    </div>
+                    <div class="frame-27">
+                        <div class="password opensans-semi-bold-black-17px" >
+                            Password
+                        </div>
+                        <input name="password" class="rectangle-1" type="password" id="password" />
+                        <div class="forgot opensans-semi-bold-unmellow-yellow-14px">
+                            <a href="{% url 'reset_password' %}">
+                            Forgot Username or Password? 
+                            </a>
+                        </div><br/>
+                    </div>
+                    <div class="frame-100">
+                        <input type="submit" class="frame-28" value="Login" />
+                    </div>
+                </form>
+            </div>
+            <div class="frame-29">
+                <div class="dont-have-an-account opensans-semi-bold-black-17px">
+                    Don't Have an Account?
+                </div>
+                <input type="submit" class="register-now" value="Register Now" onclick="location.href='{% url 'register' %}'"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

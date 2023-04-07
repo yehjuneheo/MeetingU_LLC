@@ -1,0 +1,112 @@
+/* screen - student-sign-up */
+
+.student-sign-up {
+  align-items: flex-end;
+  background-image: url(../img/student-sign-up.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  padding: 43px 145px;
+  width: 1440px;
+}
+
+.student-sign-up .title {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 32px;
+  text-align: center;
+  width: 575px;
+}
+
+.student-sign-up .line-7 {
+  height: 1px;
+  margin-right: 37px;
+  margin-top: 24px;
+  object-fit: cover;
+  width: 478px;
+}
+
+.student-sign-up .frame {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-right: 76px;
+  margin-top: 24px;
+  position: relative;
+  width: fit-content;
+}
+
+.student-sign-up .rectangle {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-2);
+  border-radius: 5px;
+  height: 40px;
+  min-width: 400px;
+  position: relative;
+}
+
+.student-sign-up .group-595 {
+  align-items: flex-start;
+  display: flex;
+  margin-right: 110px;
+  margin-top: 58px;
+  min-width: 330px;
+}
+
+.student-sign-up .overlap-group {
+  align-items: center;
+  background-color: var(--shamrock);
+  border-radius: 20px;
+  display: flex;
+  height: 67px;
+  justify-content: flex-end;
+  min-width: 328px;
+  padding: 0 55px;
+}
+
+.student-sign-up .register-as-student {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 24.9px;
+  text-align: center;
+  white-space: nowrap;
+  width: 210px;
+}
+
+.student-sign-up .frame-46 {
+  align-items: flex-start;
+  display: flex;
+  gap: 13px;
+  margin-right: 113px;
+  margin-top: 58px;
+  position: relative;
+  width: fit-content;
+}
+
+.student-sign-up .already-have-an-account {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.student-sign-up .login-now {
+  color: #1511e7;
+  font-family: var(--font-family-open_sans);
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  width: fit-content;
+}

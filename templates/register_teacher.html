@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        TBD
+    </title>
+
+    <link rel="stylesheet" href="{% static 'styleguide.css' %}">
+    <link rel="stylesheet" href="{% static 'register_teacher.css' %}">
+
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <style>
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrapper {
+            background-color: #ffffff;
+            width: 450px;
+            padding: 50px 0;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            border-radius: 8px;
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .container {
+            min-width: 400px;
+            position: relative;
+            margin: auto;
+        }
+        
+        .password_input {
+            background-color: var(--white);
+            border: 1px solid;
+            border-color: var(--black-2);
+            border-radius: 5px;
+            height: 40px;
+            min-width: 400px;
+            position: relative;
+            padding-left: 8px;
+            width: 100%;
+        }
+        
+        #toggle {
+            position: absolute;
+            top: 12px;
+            color: #808080;
+            cursor: pointer;
+            right: 15px;
+        }
+        
+        .strength {
+            width: 25%;
+            display: inline-block;
+            position: relative;
+            height: 100%;
+            bottom: 5px;
+        }
+        
+        #strength-bar {
+            background-color: #dcdcdc;
+            height: 10px;
+            position: relative;
+        }
+        
+        p {
+            width: 100%;
+            text-align: center;
+        }
+
+        #msg{
+            font-family: "Roboto Mono", monospace;
+            margin-botton: 35px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="register-mentor screen">
+        <div class="frame-70">
+            <div class="frame-48">
+                <h1 class="title">Create a Mentor Account</h1>
+                <img class="line-3" src="{% static 'line.png' %}" alt="Line 3"/>
+            </div>
+            {% for message in messages %}
+            <h5>{{message}}</h5>
+            {% endfor %}
+            <form method="POST" action="register_teacher" class="form" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="frame">
+                    <div class="first-name opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">First Name</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="firstname" class="rectangle" placeholder="First Name" required/>
+                </div>
+                <div class="frame">
+                    <div class="last-name opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Last Name</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="lastname" class="rectangle" placeholder="Last Name" required/>
+                </div>
+                <div class="frame">
+                    <div class="username opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Username</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="username" class="rectangle" placeholder="Username" required/>
+                </div>
+                <div class="frame">
+                    <div class="gender opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Gender</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="gender" class="rectangle" placeholder="Gender" required/>
+                </div>
+                <div class="frame">
+                    <div class="university opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">University</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="university" class="rectangle" placeholder="University" required/>
+                </div>
+                <div class="frame">
+                    <div class="university-email opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">University Email</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="email" class="rectangle" placeholder="University Email (.edu)" required/>
+                </div>
+                <div class="frame">
+                    <div class="major-select-all opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Major (Select All)</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <select name="major" class="rectangle" required/>
+                        <option selected="selected" disabled>Select All of your Majors</option>
+                        <option value="ECE">ECE</option>
+                        <option value="Business">Business</option>
+                        <option value="Langauge">Langauge</option>
+                        <option value="Philosophy">Philosophy</option>
+                        <option value="Compuer Science">Compuer Science</option>
+                    </select>
+                </div>
+                <div class="frame">
+                    <div class="minor-select-all opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Minor (Select All)</span>
+                    </div>
+                    <select name="minor" class="rectangle" required/>
+                        <option selected="selected" disabled>Select All of your Minors</option>
+                        <option value="ECE">ECE</option>
+                        <option value="Business">Business</option>
+                        <option value="Langauge">Langauge</option>
+                        <option value="Philosophy">Philosophy</option>
+                        <option value="Compuer Science">Compuer Science</option>
+                    </select>
+                </div>
+                <div class="frame">
+                    <div class="current-education-level opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Select Timezone</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <select name="timezone" class="rectangle" required/>
+                        <option selected="selected" disabled>Select your current timezone</option>
+                        <option value="Associate">Associate</option>
+                        <option value="Bachelor's">Bachelor's</option>
+                        <option value="Graduate">Graduate</option>
+                    </select>
+                </div>
+                <div class="frame">
+                    <div class="current-education-level opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Current Education Level</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <select name="education_level" class="rectangle" required/>
+                        <option selected="selected" disabled>Select Current/Pursuing Education Level</option>
+                        <option value="Associate">Associate</option>
+                        <option value="Bachelor's">Bachelor's</option>
+                        <option value="Graduate">Graduate</option>
+                        <option value="Doctorate">Doctorate</option>
+                        <option value="Professional">Professional</option>
+                    </select>
+                </div>
+                <div class="frame">
+                    <div class="available-timelines opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Available Timelines</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <div class="rectangle-30"></div>
+                </div>
+                <div class="frame">
+                    <div class="upload-profile-picture opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Upload Profile Picture</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="file" class="image_input" name="imagefile" accept="image/*" onchange="readURL(this);"/>
+                    <img id="blah" class="display_image" style="width:200px;height:auto;"/>
+                </div>
+                <div class="frame">
+                    <div class="about-you opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Brief Introduction About Yourself</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <textarea class="rectangle-3-1" name="brief_introduction" placeholder="Write your introduction about yourself here!"></textarea>
+                </div>
+                <div class="frame">
+                    <div class="optional-upload-resume opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">(Optional) Upload Resume</span>
+                    </div>
+                    <input type="file" class="file_input" name="resumefile" accept="application/pdf, application/msword" />
+                </div>
+                <div class="frame">
+                    <div "optional-linkedin-profile-link opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">(Optional) Linkedin Profile Link</span>
+                    </div>
+                    <input type="text" name="linkedin" class="rectangle" placeholder="Place URL Here"/>
+                </div>
+                <div class="frame-a">
+                    <div class="password opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Password</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <div class="container">
+                        <input name="password" class="password_input" type="password" id="password" oninput="strengthChecker()" placeholder="Enter Password">
+                        <span id="toggle" onclick="toggle()">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <div id="strength-bar"></div>
+                    </div>
+                    <p id="msg"></p>
+                </div>
+                <div class="frame">
+                    <div class="reenter-password opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Reenter Password</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="password" name="password2" class="rectangle" placeholder="Reenter Password" required/>
+                </div>
+                <div class="frame">
+                    <div class="optional-additional-information opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">(Optional) Additional Information</span>
+                    </div>
+                    <textarea class="rectangle-3-1" name="additional_information" placeholder="Write precise details about yourself here! Ther more the detailed, the higher chance of getting a meeting request!"></textarea>
+                </div>
+                <div class="frame-69">
+                    <div class="setup-bank-account opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Setup Bank Account</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <div class="rectangle-36"></div>
+                </div>
+                <input type="checkbox" id="agreementCheckbox" required>
+                <label for="agreementCheckbox">I agree to the terms and conditions</label>
+                <input type="hidden" id="agreementCheckboxValue" name="agreementCheckboxValue">
+                <button type="button" onclick="openAgreement()">Read Agreement</button>
+                <div class="frame-100">
+                    <input type="submit" class="frame-67" value="Register as Mentor"/>
+                </div>
+            </form>
+            <div class="frame-68">
+                <div class="already-have-an-account opensans-semi-bold-black-17px">Already have an Account?</div>
+                <input type="submit" class="login-now" value="Login Now" onclick="location.href='{% url 'login' %}'"/>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let parameters = {
+            count : false,
+            letters : false,
+            numbers : false,
+            special : false
+        }
+        let strengthBar = document.getElementById("strength-bar");
+        let msg = document.getElementById("msg");
+
+        
+        function strengthChecker(){
+            let password = document.getElementById("password").value;
+        
+            parameters.letters = (/[A-Za-z]+/.test(password))?true:false;
+            parameters.numbers = (/[0-9]+/.test(password))?true:false;
+            parameters.special = (/[!\"$%&/()=?@~`\\.\';:+=^*_-]+/.test(password))?true:false;
+            parameters.count = (password.length > 7)?true:false;
+        
+            let barLength = Object.values(parameters).filter(value=>value);
+        
+            console.log(Object.values(parameters), barLength);
+        
+            strengthBar.innerHTML = "";
+            for( let i in barLength){
+                let span = document.createElement("span");
+                span.classList.add("strength");
+                strengthBar.appendChild(span);
+            }
+        
+            let spanRef = document.getElementsByClassName("strength");
+            for( let i = 0; i < spanRef.length; i++){
+                switch(spanRef.length - 1){
+                    case 0 :
+                        spanRef[i].style.background = "#ff3e36";
+                        msg.textContent = "Your password is very weak";
+                        break;
+                    case 1:
+                        spanRef[i].style.background = "#ff691f";
+                        msg.textContent = "Your password is weak";
+                        break;
+                    case 2:
+                        spanRef[i].style.background = "#ffda36";
+                        msg.textContent = "Your password is good";
+                        break;
+                    case 3:
+                        spanRef[i].style.background = "#0be881";
+                        msg.textContent = "Your password is strong";
+                        break;
+                }
+            }
+        }
+        
+        function toggle(){
+            let password = document.getElementById("password");
+            let eye = document.getElementById("toggle");
+        
+            if(password.getAttribute("type") == "password"){
+                password.setAttribute("type","text");
+                eye.style.color = "#0be881";
+            }
+            else{
+                password.setAttribute("type","password");
+                eye.style.color = "#808080";
+            }
+        }
+
+        function openAgreement() {
+            window.open('/agreement/', '_blank', 'width=600,height=400');
+          }
+          
+          const agreementCheckbox = document.getElementById('agreementCheckbox');
+          const agreementCheckboxValue = document.getElementById('agreementCheckboxValue');
+          
+          agreementCheckbox.addEventListener('click', function(event) {
+            event.preventDefault(); // prevent the checkbox from being checked or unchecked
+            agreementCheckboxValue.value = 'true'; // set the value of the hidden field to 'true'
+          });
+          
+          window.addEventListener('message', function(event) {
+            if (event.data === 'agreement_confirmed') {
+              agreementCheckbox.checked = true; // check the checkbox programmatically
+              agreementCheckboxValue.value = 'true'; // set the value of the hidden field to 'true'
+              console.log("yes");
+            }
+          });
+    </script>
+</body>
+</html>

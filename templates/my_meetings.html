@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        TBD
+    </title>
+
+    <link rel="stylesheet" href="{% static 'styleguide.css' %}">
+    <link rel="stylesheet" href="{% static 'my_meetings.css' %}">
+</head>
+<body>
+    <div class="my-meetings screen">
+        <div class="frame-108-1">
+            <div class="frame-84">
+                <div class="logo">Logo</div>
+            </div>
+            <form action="{% url 'search' %}" class="frame-22" method="get">
+                <div class="frame-85">
+                    <img class="icon1" src="{% static 'science-university-icon.png' %}" alt="Science-University-icon 1" />
+                    <input type="text" name="university" class="input_box" placeholder="University"/>
+                </div>
+                <div class="frame-86">
+                    <img class="icon2" src="{% static '565830-200.png' %}" alt="565830-200 1" />
+                    <input type="text" name="major" class="input_box" placeholder="Major"/>
+                </div>
+                <input type="submit" value="Search" class="frame-12"/>
+            </form>
+            {% if user.is_authenticated and user.is_mentor %}
+            <div class="frame-7">
+                <input type="submit" class="profile" value="{{user.username}}" onclick="location.href='{% url 'my_profile' user.id %}'"/>
+            </div>
+            {% else %}
+            <input type="submit" class="login" value="Login" onclick="location.href='{% url 'login' %}'"/>
+            {% endif %}
+        </div>
+        <div class="frame-1">
+            <h1 class="title">My Meetings</h1>
+            <img class="line-4" src="{% static 'line.png' %}" alt="Line 4" />
+        </div>
+        {% for meeting in my_meetings%}
+        <div class="frame-1">
+            <p class="first-last">{{meeting.receiver}} at {{meeting.datetime}} </p>
+            {% if meeting.is_completed %}
+                <div class="status opensans-semi-bold-black-25px">Status: Completed</div>
+            {% elif meeting.is_confirmed %}
+                <div class="status opensans-semi-bold-black-25px">Status: Confirmed</div>
+            {% elif meeting.is_rejected %}
+                <div class="status opensans-semi-bold-black-25px">Status: Rejected</div>
+            {% elif meeting.is_cancelled %}
+                <div class="status opensans-semi-bold-black-25px">Status: Cancelled</div>
+            {% else %}
+                <div class="status opensans-semi-bold-black-25px">Status: Need Confirmation</div>
+            {% endif %}
+            <div class="zoom-link opensans-semi-bold-black-25px">Zoom Link</div>
+
+            {% if not meeting.is_confirmed and not meeting.is_rejected and not meeting.is_completed and not meeting.is_cancelled %}
+                <input type="submit" class="login" value = "Confirm Meeting" onclick="location.href='{% url 'confirmation_successful' user.id meeting.id %}'" />
+                <input type="submit" class="login" value = "Reject Meeting" onclick="location.href='{% url 'reject_reservation' user.id meeting.id %}'" />
+            {% elif not meeting.is_confirmed and meeting.is_rejected %}
+            <div class="frame-111">
+                <div class="upload-video-to-confirm opensans-semi-bold-black-25px" style="color:red">Meeting is Rejected</div>
+            </div>
+            {% elif meeting.is_cancelled %}
+            <div class="frame-111">
+                <div class="upload-video-to-confirm opensans-semi-bold-black-25px" style="color:red">Meeting is Cancelled</div>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if meeting.is_waiting_for_video %}
+            <div class="frame-111">
+                <div class="upload-video-to-confirm opensans-semi-bold-black-25px">Upload Video to Confirm:</div>
+                <input type="submit" class="login" value = "Upload Video" onclick="location.href='{% url 'upload_video' user.id meeting.id %}'" />
+            </div>
+            {% elif meeting.is_video_uploaded %}
+            <div class="frame-111">
+                <div class="upload-video-to-confirm opensans-semi-bold-black-25px" style="color:red">Video Submitted</div>
+            </div>
+            {% elif meeting.is_rejected or not meeting.is_confirmed or meeting.is_cancelled %}
+            {% else %}
+            <div class="frame-111">
+                <div class="upload-video-to-confirm opensans-semi-bold-black-25px" style="color:red">Upload Video after this meeting is completed</div>
+            </div>
+            <input type="submit" class="login" value = "Reject Meeting" onclick="location.href='{% url 'reject_reservation' user.id meeting.id %}'" />
+            {% endif %}
+            <img class="line-5" src="{% static 'line.png' %}" alt="Line 5" />
+        </div>
+        {% endfor %}
+        <div class="frame-5">
+            <div class="frame-21">
+                <div class="frame-1-2">
+                    <div class="place-3 opensans-bold-white-25px">Contact</div>
+                    <div class="address opensans-normal-white-20px">Address</div>
+                    <div class="email opensans-normal-white-20px">Email</div>
+                </div>
+                <div class="frame-1-3">
+                    <div class="place-4 opensans-bold-white-25px">Legal</div>
+                    <div class="frame-1-item opensans-normal-white-20px">Terms of Use</div>
+                    <div class="frame-1-item opensans-normal-white-20px">Privacy Policy</div>  
+                </div>
+                <div class="frame-20"></div>
+            </div>
+            <div class="frame-19">
+                <p class="copyright opensans-normal-white-20px">
+                <br /> c 2022 by Something. All rights reserved.</p>
+                <div class="rectangle"></div>
+                <div class="rectangle"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

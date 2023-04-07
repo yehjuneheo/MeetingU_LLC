@@ -1,0 +1,29 @@
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+        <td  align="center">
+            <h1 class="request-sent" style="font-weight: bold; font-size:25px; padding-bottom:10px;">A Meeting Request has been sent to you!</h1>
+            <h2 style="font-weight: bold; font-size:17px">{{student.firstname}} {{student.lastname}} send you a meeting request at:</h2>
+            <h2 style="font-weight: bold; font-size:17px">{{meeting.datetime}}</h2>
+            <table cellspacing="5" cellpadding="5">
+                <tr>
+                    <h2 class="first-last text_font">
+                    <td style="border-radius: 2px;" bgcolor="#00a651">
+                        <a href="http://{{domain}}{% url 'confirm_meeting' uidb64=uid token=token %}" target="_blank" style="padding: 8px 12px; border-radius: 2px;font-family: Helvetica, Arial, sans-serif;font-size: 14px; color: #ffffff;text-decoration: none;font-weight:bold;display: inline-block;">
+                            Confirm Meeting             
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <table cellspacing="5" cellpadding="5">
+                <tr>
+                    <h2 class="first-last text_font">
+                    <td style="border-radius: 2px;" bgcolor="#ED2939">
+                        <a href="http://{{domain}}{% url 'confirm_meeting' uidb64=uid token=token %}" target="_blank" style="padding: 8px 12px; ;border-radius: 2px;font-family: Helvetica, Arial, sans-serif;font-size: 14px; color: #ffffff;text-decoration: none;font-weight:bold;display: inline-block;">
+                            Reject Request             
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+  </table>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        TBD
+    </title>
+
+    <link rel="stylesheet" href="{% static 'styleguide.css' %}">
+    <link rel="stylesheet" href="{% static 'register_student.css' %}">
+</head>
+<body>
+    <div class="register-student screen">
+        <div class="frame-47">
+            <div class="frame-37">
+                <h1 class="title"> My Profile </h1>
+                <img class="line-3" src="{% static 'line.png' %}" alt="Line 3" />
+            </div>
+            {% for message in messages %}
+            <h5>{{message}}</h5>
+            {% endfor %}
+            <form method="POST" action="register_student" class="form">
+                {% csrf_token %}
+                <div class="frame">
+                    <div class="first-name opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">First Name</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="firstname" class="rectangle" placeholder="First Name" required/>
+                </div>
+                <div class="frame">
+                    <div class="last-name opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Last Name</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="lastname" class="rectangle" placeholder="Last Name" required/>
+                </div>
+                <div class="frame">
+                    <div class="username opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Username</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="username" class="rectangle" placeholder="Username" required/>
+                </div>
+                <div class="frame">
+                    <div class="email opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Email</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                    <input type="text" name="email" class="rectangle" placeholder="Email" required/>
+                </div>
+                <div class="frame-44">
+                    <div class="setup-payment-method opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Setup Payment Method</span>
+                        <span class="opensans-semi-bold-red-17px">*</span>
+                    </div>
+                </div>
+                <div class="frame-100">
+                    <input type="submit" class="frame-45" value="Register as Student" />
+                </div>
+            </form>
+            <div class="frame-46">
+                <div class="already-have-an-account opensans-semi-bold-black-17px">Already have an Account?</div>
+                <input type="submit" class="login-now" value="Login Now" onclick="location.href='{% url 'login' %}'"/>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let parameters = {
+            count : false,
+            letters : false,
+            numbers : false,
+            special : false
+        }
+        let strengthBar = document.getElementById("strength-bar");
+        let msg = document.getElementById("msg");
+        
+        function strengthChecker(){
+            let password = document.getElementById("password").value;
+        
+            parameters.letters = (/[A-Za-z]+/.test(password))?true:false;
+            parameters.numbers = (/[0-9]+/.test(password))?true:false;
+            parameters.special = (/[!\"$%&/()=?@~`\\.\';:+=^*_-]+/.test(password))?true:false;
+            parameters.count = (password.length > 7)?true:false;
+        
+            let barLength = Object.values(parameters).filter(value=>value);
+        
+            console.log(Object.values(parameters), barLength);
+        
+            strengthBar.innerHTML = "";
+            for( let i in barLength){
+                let span = document.createElement("span");
+                span.classList.add("strength");
+                strengthBar.appendChild(span);
+            }
+        
+            let spanRef = document.getElementsByClassName("strength");
+            for( let i = 0; i < spanRef.length; i++){
+                switch(spanRef.length - 1){
+                    case 0 :
+                        spanRef[i].style.background = "#ff3e36";
+                        msg.textContent = "Your password is very weak";
+                        break;
+                    case 1:
+                        spanRef[i].style.background = "#ff691f";
+                        msg.textContent = "Your password is weak";
+                        break;
+                    case 2:
+                        spanRef[i].style.background = "#ffda36";
+                        msg.textContent = "Your password is good";
+                        break;
+                    case 3:
+                        spanRef[i].style.background = "#0be881";
+                        msg.textContent = "Your password is strong";
+                        break;
+                }
+            }
+        }
+        
+        
+        function toggle(){
+            let password = document.getElementById("password");
+            let eye = document.getElementById("toggle");
+        
+            if(password.getAttribute("type") == "password"){
+                password.setAttribute("type","text");
+                eye.style.color = "#0be881";
+            }
+            else{
+                password.setAttribute("type","password");
+                eye.style.color = "#808080";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        TBD
+    </title>
+
+    <link rel="stylesheet" href="{% static 'styleguide.css' %}">
+    <link rel="stylesheet" href="{% static 'register_teacher.css' %}">
+
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <div class="register-mentor screen">
+        <div class="frame-70">
+            <div class="frame-48">
+                <h1 class="title">My Mentor Profile</h1>
+                <img class="line-3" src="{% static 'line.png' %}" alt="Line 3"/>
+            </div>
+            {% for message in messages %}
+            <h5>{{message}}</h5>
+            {% endfor %}
+            <form method="POST" action="change_values" class="form" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="frame">
+                    <div class="first-name opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">First Name</span>
+                        <input type="submit" value="edit" onclick="showFirstName()"/>
+                    </div>
+                    <div class="rectangle-1" id="firstname1">{{my_profile.firstname}}</div>
+                    <input type="text" name="firstname" class="rectangle" id="firstname2" style="display:none;" placeholder="{{my_profile.firstname}}" required/>
+                </div>
+                <div class="frame">
+                    <div class="last-name opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Last Name</span>
+                        <input type="submit" value="edit" onclick="showLastName()"/>
+                    </div>
+                    <div class="rectangle-1" id="lastname1">{{my_profile.lastname}}</div>
+                    <input type="text" name="lastname" class="rectangle" id="lastname2" style="display:none;" placeholder="{{my_profile.lastname}}" required/>
+                </div>
+                <div class="frame">
+                    <div class="username opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Username</span>
+                    </div>
+                    <div class="rectangle-1">{{my_profile.username}}</div>
+                </div>
+                <div class="frame">
+                    <div class="gender opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Gender</span>
+                        <input type="submit" value="edit" onclick="showGender()"/>
+                    </div>
+                    <div class="rectangle-1" id="gender1">{{my_profile.gender}}</div>
+                    <input type="text" name="gender" class="rectangle" id="gender2" style="display:none;" placeholder="{{my_profile.gender}}" required/>
+                </div>
+                <div class="frame">
+                    <div class="university opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">University</span>
+                    </div>
+                    <div class="rectangle-1">{{my_profile.university}}</div>
+                </div>
+                <div class="frame">
+                    <div class="university-email opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">University Email</span>
+                    </div>
+                    <div class="rectangle-1">{{my_profile.email}}</div>
+                </div>
+                <div class="frame">
+                    <div class="major-select-all opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Major</span>
+                    </div>
+                    <div class="rectangle-1">{{my_profile.major}}</div>
+                </div>
+                <div class="frame">
+                    <div class="minor-select-all opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Minor</span>
+                    </div>
+                    {% if my_profile.minor is None %}
+                    <div class="rectangle-1">Not Provided</div>
+                    {% else %}
+                    <div class="rectangle-1">{{my_profile.minor}}</div>
+                    {% endif %}
+                </div>
+                <div class="frame">
+                    <div class="current-education-level opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Select Timezone</span>
+                    </div>
+                    <div class="rectangle-1">{{my_profile.timezone}}</div>
+                </div>
+                <div class="frame">
+                    <div class="current-education-level opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Current Education Level</span>
+                    </div>
+                    <div class="rectangle-1">{{my_profile.education_level}}</div>
+                </div>
+                <div class="frame">
+                    <div class="available-timelines opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Available Timelines</span>
+                    </div>
+                    <div class="rectangle-30"></div>
+                </div>
+                <div class="frame">
+                    <div class="upload-profile-picture opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Upload Profile Picture</span>
+                    </div>
+                    <div class="image_input">{{my_profile.profile_image}}</div>
+                </div>
+                <div class="frame">
+                    <div class="about-you opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Brief Introduction About Yourself</span>
+                    </div>
+                    <div class="rectangle-3-2">{{my_profile.brief_introduction}}</div>
+                </div>
+                <div class="frame">
+                    <div class="optional-upload-resume opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">(Optional) Upload Resume</span>
+                    </div>
+                    <div class="file_input-3-1">{{my_profile.resume}}</div>
+                </div>
+                <div class="frame">
+                    <div "optional-linkedin-profile-link opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">(Optional) Linkedin Profile Link</span>
+                    </div>
+                    {% if my_profile.linkedin %}
+                    <div class="rectangle-1">{{my_profile.linkedin}}</div>
+                    {% else %}
+                    <div class="rectangle-1">Not Provided</div>
+                    {% endif %}
+                </div>
+                <div class="frame">
+                    <div class="optional-additional-information opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">(Optional) Additional Information</span>
+                    </div>
+                    {% if my_profile.additional_information is None %}
+                    <div class="rectangle-3-2">Not Provided</div>
+                    {% else %}
+                    <div class="rectangle-3-2">{{my_profile.additional_information}}</div>
+                    {% endif %}
+                </div>
+                <div class="frame-69">
+                    <div class="setup-bank-account opensans-semi-bold-white-17px">
+                        <span class="opensans-semi-bold-black-17px">Setup Bank Account</span>
+                    </div>
+                    <div class="rectangle-37"></div>
+                </div>
+                <input type="submit" value = "See my meetings" onclick="location.href='{% url 'my_meetings' user.id %}'" />
+                <input type="submit" value = "Logout" onclick="location.href='{% url 'logout_view' %}'" />
+                <div class="frame-100">
+                    <input type="submit" class="frame-67" id="saveButton" value="Save" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function showFirstName() {
+            document.getElementById('firstname1').style.display = "none";
+            document.getElementById('firstname2').style.display = "flex";
+            document.getElementById('saveButton').style.display = "flex";
+         }
+         function showLastName() {
+            document.getElementById('lastname1').style.display = "none";
+            document.getElementById('lastname2').style.display = "flex";
+            document.getElementById('saveButton').style.display = "flex";
+         }
+         function showGender() {
+            document.getElementById('gender1').style.display = "none";
+            document.getElementById('gender2').style.display = "flex";
+            document.getElementById('saveButton').style.display = "flex";
+         }
+    </script>
+</body>
+</html>

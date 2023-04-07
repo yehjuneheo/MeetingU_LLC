@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,700,600,800,700italic,400italic,800italic");
+
+.email-request-meeting {
+    align-items: center;
+    background-color: var(--white);
+    border:1px none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.pngfind-1 {
+    height: 165px;
+    min-width: 165px;
+    object-fit: cover;
+}
+
+.frame-118{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: fit-content;
+}
+
+.line-6 {
+    height: 3px;
+    min-width: 895px;
+}
+
+.request-sent {
+    color: var(--black);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xxxxl2);
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    line-height: normal;
+    text-align: center;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.first-last {
+    letter-spacing: 0.84px;
+    line-height: normal;
+    width: fit-content;
+}
+
+.span1 {
+    color: var(--black);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xxxxl);
+    font-weight: 400;
+}
+
+.frame-119 {
+    align-items: flex-start;
+    background-color: #00a651;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px #00000080;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    padding: 15px 30px;
+    width: fit-content;
+
+    color: var(--white);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    letter-spacing: 1.75px;
+    text-align: center;
+
+    border-width: 0px;
+}
+
+.frame-120 {
+    align-items: flex-start;
+    background-color: #e54444;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px #00000080;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    padding: 8px 25px;
+    width: fit-content;
+
+    color: var(--white);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-s);
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-align: center;
+
+    border-width: 0px;
+}
+
+.date-time {
+    color: var(--black);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+    letter-spacing: 1.14px;
+    line-height: normal;
+    width: fit-content;
+}

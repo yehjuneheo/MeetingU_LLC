@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Password Strength Checker</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style>
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrapper {
+            background-color: #ffffff;
+            width: 450px;
+            padding: 50px 0;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            border-radius: 8px;
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .container {
+            width: 300px;
+            position: relative;
+            margin: auto;
+        }
+        
+        .password_input {
+            width: 100%;
+            height: 50px;
+            padding: 0 40px 0 20px;
+            position: relative;
+            background-color: #f5f5f5;
+            border: none;
+            outline: none;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        #toggle {
+            position: absolute;
+            top: 17px;
+            right: 15px;
+            color: #808080;
+            cursor: pointer;
+        }
+        
+        .strength {
+            width: 25%;
+            display: inline-block;
+            position: relative;
+            height: 100%;
+            bottom: 5px;
+        }
+        
+        #strength-bar {
+            background-color: #dcdcdc;
+            height: 10px;
+            position: relative;
+        }
+        
+        p {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Roboto Mono", monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <input name="password" class="password_input" type="password" id="password" oninput="strengthChecker()" placeholder="Enter Password">
+            <span id="toggle" onclick="toggle()">
+                <i class="fas fa-eye"></i>
+            </span>
+            <div id="strength-bar"></div>
+        </div>
+        <p id="msg"></p>
+    </div>
+    <!--Script-->
+    <script type="text/javascript">
+    let parameters = {
+        count : false,
+        letters : false,
+        numbers : false,
+        special : false
+    }
+    let strengthBar = document.getElementById("strength-bar");
+    let msg = document.getElementById("msg");
+    
+    function strengthChecker(){
+        let password = document.getElementById("password").value;
+    
+        parameters.letters = (/[A-Za-z]+/.test(password))?true:false;
+        parameters.numbers = (/[0-9]+/.test(password))?true:false;
+        parameters.special = (/[!\"$%&/()=?@~`\\.\';:+=^*_-]+/.test(password))?true:false;
+        parameters.count = (password.length > 7)?true:false;
+    
+        let barLength = Object.values(parameters).filter(value=>value);
+    
+        console.log(Object.values(parameters), barLength);
+    
+        strengthBar.innerHTML = "";
+        for( let i in barLength){
+            let span = document.createElement("span");
+            span.classList.add("strength");
+            strengthBar.appendChild(span);
+        }
+    
+        let spanRef = document.getElementsByClassName("strength");
+        for( let i = 0; i < spanRef.length; i++){
+            switch(spanRef.length - 1){
+                case 0 :
+                    spanRef[i].style.background = "#ff3e36";
+                    msg.textContent = "Your password is very weak";
+                    break;
+                case 1:
+                    spanRef[i].style.background = "#ff691f";
+                    msg.textContent = "Your password is weak";
+                    break;
+                case 2:
+                    spanRef[i].style.background = "#ffda36";
+                    msg.textContent = "Your password is good";
+                    break;
+                case 3:
+                    spanRef[i].style.background = "#0be881";
+                    msg.textContent = "Your password is strong";
+                    break;
+            }
+        }
+    }
+    
+    
+    function toggle(){
+        let password = document.getElementById("password");
+        let eye = document.getElementById("toggle");
+    
+        if(password.getAttribute("type") == "password"){
+            password.setAttribute("type","text");
+            eye.style.color = "#0be881";
+        }
+        else{
+            password.setAttribute("type","password");
+            eye.style.color = "#808080";
+        }
+    }
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Verdana;
+    text-align: center;
+}
+
+div.container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.form-control {
+    background: #ffffff;
+    width: 600px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+}
+
+input.button1 {
+    background-color: tomato;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+input.button2 {
+    background-color: tomato;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+div.select_giver {
+    background-color: #b1b1b1;
+    padding: 5px 5px;
+    margin: 10px 10px; 
+}
+
+div.found_giver {
+    background-color: #c8c8c8;
+    padding: 5px 5px;
+    margin: 10px 10px; 
+}
+
+div.always {
+    background-color: #c8c8c8;
+    padding: 5px 5px;
+    margin: 10px 10px; 
+}
+
+div.prof {
+    background-color: #e6e6e6;
+    padding: 5px 5px;
+    margin: 10px 10px;
+}
+
+div input.go_login {
+    background-color: #00b609;
+    padding: 10px 30px;
+    margin: 20px 20px;
+    margin-bottom: 40px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+div input.go_home {
+    background-color: #4949c1;
+    padding: 10px 30px;
+    margin: 20px 20px;
+    margin-bottom: 40px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+div input.go_register {
+    background-color: #7543a4;
+    padding: 10px 30px;
+    margin: 20px 20px;
+    margin-bottom: 40px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}

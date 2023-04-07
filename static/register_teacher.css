@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,700,600,800,700italic,400italic,800italic");
+.body {
+    height: 100vh;
+    width: 100%;
+}
+
+.register-mentor {
+    align-items: flex-start;
+    background-color: var(--black-2);
+    background-image: url("background2.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    border: 1px none;
+    display: flex;
+    gap: 10px;
+    padding: 103px 377px;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.frame-70 {
+    align-items: center;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+    padding: 50px;
+    width: fit-content;
+}
+
+.frame {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: fit-content;
+}
+
+.university {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.rectangle {
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: var(--black-2);
+    border-radius: 5px;
+    height: 40px;
+    min-width: 400px;
+    margin-bottom: 35px;
+    padding-left: 8px;
+}
+
+.frame-67 {
+    align-items: flex-start;
+    background-color: var(--cinnabar);
+    border-radius: 30px;
+    box-shadow: 4px 4px 8px #00000080;
+    display: flex;
+    gap: 10px;
+    padding: 11px 23px;
+    width: fit-content;
+    border-width: 0px;
+    cursor: pointer;
+    color: var(--white);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xxl2);
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+}
+
+.frame-67:hover {
+    background-color: var(--cinnabar2);
+}
+
+.university-email {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.rectangle-30 {
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: var(--black-2);
+    border-radius: 5px;
+    height: 130px;
+    min-width: 400px;
+    margin-bottom: 35px;
+    padding: 4px 4px;
+}
+
+.available-timelines {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.password {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.optional-linkedin-profile-link {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.minor-select-all {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.majorr-select-all {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.rectangle-3-1 {
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: var(--black-2);
+    border-radius: 5px;
+    height: 140px;
+    min-width: 400px;
+    resize: none;
+    margin-bottom: 35px;
+    padding: 8px 8px;
+}
+
+.frame-a {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: fit-content;
+    margin-bottom: 35px;
+}
+
+.optional-additional-information {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.frame-48 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    width: fit-content;
+}
+
+.line-3 {
+    height: 2px;
+    min-width: 585px;
+}
+
+.title {
+    color: var(--black);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xxxxl2);
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    width: fit-content;
+}
+
+.first-name {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.last-name {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.reenter-password {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.frame-68 {
+    align-items: flex-start;
+    display: flex;
+    gap: 13px;
+    width: fit-content;
+}
+
+.login-now {
+    color: #1511e7;
+    cursor: pointer;
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-l2);
+    font-weight: 600;
+    letter-spacing: 0.51px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    text-decoration: underline;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.already-have-an-account {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    width: fit-content;
+}
+
+.current-education-level {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.optional-upload-resume {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.rectangle-3 {
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: var(--black-2);
+    border-radius: 5px;
+    height: 40px;
+    min-width: 161px;
+    margin-bottom: 35px;
+}
+
+.upload-profile-picture {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.frame-69 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    width: fit-content;
+}
+
+.rectangle-36 {
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: var(--black-2);
+    border-radius: 5px;
+    height: 291px;
+    min-width: 400px;
+    margin-bottom: 40px;
+}
+
+.setup-bank-account {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.frame-55 {
+    height: 69px;
+    min-width: 400px;
+}
+
+.gender {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.brief-introfuction-about-yourself {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+h5 {
+    text-align: center;
+    color: red;
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-l2);
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.frame-100 {
+    justify-content: center;
+    display: flex;
+}
+
+.display_image {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 35px;
+}
+
+.file_input {
+    margin-bottom: 35px;
+}
+
+.rectangle-1 {
+    background-color: var(--white);
+    font-family: var(--font-family-open_sans);
+    border-width: 0px;
+    border-radius: 5px;
+    height: 40px;
+    min-width: 400px;
+    margin-bottom: 10px;
+    padding-left: 8px;
+}
+
+.rectangle-3-2 {
+    background-color: var(--white);
+    border-width: 0px;
+    border-radius: 5px;
+    height: 140px;
+    min-width: 400px;
+    resize: none;
+    margin-bottom: 10px;
+    padding: 8px 8px;
+}
+
+.rectangle-37 {
+    background-color: var(--white);
+    border-width: 0px;
+    border-radius: 5px;
+    height: 291px;
+    min-width: 400px;
+    margin-bottom: 40px;
+}

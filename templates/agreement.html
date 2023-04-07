@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agreement</title>
+</head>
+<body>
+    <div id="agreement-text" style="height: 300px; overflow: scroll;">
+        Wow.
+    </div>
+    <button id="confirm-button" disabled>Confirm</button>
+
+    <script>
+        const agreementText = document.getElementById('agreement-text');
+        const confirmButton = document.getElementById('confirm-button');
+
+        agreementText.addEventListener('scroll', function() {
+            if (agreementText.scrollHeight - agreementText.scrollTop === agreementText.clientHeight || agreementText.scrollHeight - agreementText.scrollTop - agreementText.clientHeight <= 1) {
+                confirmButton.disabled = false;
+            }
+        });
+
+        confirmButton.addEventListener('click', function() {
+            // enable the submit button
+            console.log("nice")
+            window.opener.postMessage('agreement_confirmed', '*');
+
+            // save confirmation status in your database
+            alert('Thank you for confirming that you have read the agreement.');
+            window.close();
+        });
+    </script>
+</body>
+</html>

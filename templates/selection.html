@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        TBD
+    </title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="display">
+        {% if user.is_authenticated and user.is_mentor %}
+        <h1> Welcome, {{user.username}} </h1>
+        <input type="submit" value = "View my Profile" onclick="location.href='{% url 'my_profile' user.id %}'" />
+        {% else %}
+        <h1> TBD </h1>
+        {% endif %}
+
+        <div class="container">
+            <form action="search" class="form-inline" method="get">
+                <div class="autocomplete" id="autocomplete">
+                    <label class="sr-only">Search Keywords:</label>
+                    <input list="search" class="form-control" placeholder="Type of Select for Keywords" style="margin-bottom: 1rem;", name="search", autocomplete="off">
+                    <datalist id="search">
+                        <select class="selecting">
+                            {% for university in universities %}
+                            <option value="{{university.name}}" class="options">
+                            {% endfor %}
+                        </select>
+                    </datalist>
+                    <input type="checkbox" id="option1" name="search1" value="Harvard">
+                    <label for="vehicle2"> Harvard </label>
+                    <input type="checkbox" id="option2" name="search2" value="Cornell">
+                    <label for="vehicle2"> Cornell </label><br>
+                    <input type="submit" class="button1"/>
+                </div>
+            </form>
+        </div>
+        <div class="select_giver">
+            <h1> Select your giver! </h1>
+            {% if query is not None %}
+            <div class="found_giver">
+                <h2>Givers containing "{{ query }}"</h2>
+                {% for giver in results %}
+                <div class="prof">
+                    <a style="text-decoration: none; color:black;" href="/profile/{{giver.id}}">  
+                        <h3 style="color:blue;">{{giver.name}}</h3>
+                        <h4>{{giver.university}}</h4>
+                        <h4>{{giver.major}}</h4>
+                    </a>
+                </div>
+                {% empty %}
+                <h4 style="color:red;">There are no matches for your query</h4>
+                {% endfor %}
+                <div class="always">
+                    <h2>Here are some other Givers</h2>
+                    {% for giver in rests %}
+                        <div class="prof">  
+                            <a style="text-decoration: none; color:black;" href="/profile/{{giver.id}}">
+                                <h3 style="color:blue;">{{giver.name}}</h3>
+                                <h4>{{giver.university}}</h4>
+                                <h4>{{giver.major}}</h4>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+            </div>
+            <div class="always">
+                {% for giver in givers %}
+                    <div class="prof">  
+                        <a style="text-decoration: none; color:black;" href="/profile/{{giver.id}}">
+                            <h3 style="color:blue;">{{giver.name}}</h3>
+                            <h4>{{giver.university}}</h4>
+                            <h4>{{giver.major}}</h4>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div>
+        <input type="submit" class="go_login" value = "Go Login" onclick="location.href='{% url 'login' %}'" />
+    </div>
+</body>
+  
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        TBD
+    </title>
+
+    <link rel="stylesheet" href="{% static 'styleguide.css' %}">
+    <link rel="stylesheet" href="{% static 'register_main.css' %}">
+</head>
+<body>
+    <div class="register-main screen">
+        <div class="frame-36">
+            <div class="frame-3">
+                <div class="flex-col">
+                    <p class="looking-for-mentor opensans-extra-bold-black-20px">
+                        Are you a student looking for a mentor?
+                    </p>
+                    <img class="line" src="{% static 'line.png' %}" alt="Line 3" />
+                    <input type="submit" class="frame-31 opensans-semi-bold-white-22px" value="Register as Student" onclick="location.href='{% url 'register_student' %}'"/>
+                </div>
+            </div>
+            <div class="frame-3">
+                <div class="flex-col">
+                    <p class="become-a-mentor opensans-extra-bold-black-20px">
+                        Are you trying to become a mentor?
+                    </p>
+                    <img class="line" src="{% static 'line.png' %}" alt="Line 4" />
+                    <input type="submit" class="frame-31 opensans-semi-bold-white-22px" value="Register as Mentor" onclick="location.href='{% url 'register_teacher' %}'"/>
+                </div>
+            </div>
+            <div class="frame-35">
+                <div class="already-have-an-account">
+                    Already have an Account?
+                </div>
+                <input type="submit" class="login-now" value="Login Now" onclick="location.href='{% url 'login' %}'"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

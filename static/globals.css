@@ -1,0 +1,554 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800|Poppins:400,500,600|Laila:700|Roboto:400|Montserrat:400");
+/* The following line is used to measure usage of this code in production. For more info see our usage billing page */
+@import url("https://px.animaapp.com/63af56fd40dd5ccf75d87c45.63af56fdadca4242eb8efd4b.TBh9lwR.hcp.png");
+
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.meetingu-high-resolution-color-logo-2 {
+  height: 93px;
+  object-fit: cover;
+  width: 234px;
+}
+
+.first-name {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.last-name {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.username {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.email {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.password {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.reenter-password {
+  letter-spacing: 0.51px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.vector {
+  height: 9px;
+  width: 3px;
+}
+
+.world_map_png28-1 {
+  height: 622px;
+  left: 288px;
+  object-fit: cover;
+  position: absolute;
+  top: 59px;
+  width: 1184px;
+}
+
+.rectangle-32 {
+  background-color: var(--gallery);
+  height: 835px;
+  left: 689px;
+  position: absolute;
+  top: 0;
+  width: 1751px;
+}
+
+.what-people-say-about-us {
+  left: 1302px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 61px;
+  width: 524px;
+}
+
+.group-5 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  left: 2089px;
+  min-height: 166px;
+  position: absolute;
+  top: 1242px;
+  width: 187px;
+}
+
+.text-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 22px;
+  height: 26px;
+  margin-left: 36.0px;
+  min-width: 83px;
+}
+
+.text {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+  min-width: 13px;
+}
+
+.text-container-1 {
+  gap: 22px;
+  margin-left: 1.0px;
+  min-width: 118px;
+}
+
+.text-container-2 {
+  align-self: flex-start;
+  min-width: 153px;
+}
+
+.rectangle-164 {
+  background-color: #9fffeb;
+  border-radius: 20px 129px 20px 20px;
+  height: 407px;
+  left: 87px;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  transform: rotate(180deg);
+  width: 1170px;
+}
+
+.mask-group {
+  align-items: flex-start;
+  display: flex;
+  gap: 600px;
+  height: 352px;
+  justify-content: flex-end;
+  left: 993px;
+  min-width: 264px;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+}
+
+.rectangle-154 {
+  align-self: flex-end;
+  height: 352px;
+  margin-bottom: -539.0px;
+  width: 264px;
+}
+
+.mask-group-1 {
+  align-items: flex-start;
+  display: flex;
+  gap: 188px;
+  height: 480px;
+  justify-content: flex-end;
+  left: 60px;
+  min-width: 361px;
+  opacity: 0.1;
+  position: absolute;
+  top: -14px;
+  transform: rotate(90.00deg);
+}
+
+.group-42-1 {
+  height: 275px;
+  margin-top: 49.21px;
+  transform: rotate(-90.00deg);
+  width: 374px;
+}
+
+.rectangle-154-1 {
+  height: 480px;
+  margin-top: -1284.5px;
+  transform: rotate(-90.00deg);
+  width: 361px;
+}
+
+.vector-5 {
+  height: 5px;
+  left: 3px;
+  position: absolute;
+  top: 6px;
+  width: 13px;
+}
+
+.rectangle-22 {
+  border: 1px solid;
+  border-color: var(--oxford-blue);
+  border-radius: 5px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 21px;
+}
+
+.your-email {
+  color: var(--oxford-blue);
+  font-family: var(--font-family-montserrat);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 1.0px;
+  min-height: 17px;
+  min-width: 74px;
+}
+
+.subscribe {
+  color: var(--white);
+  font-family: var(--font-family-open_sans);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 23px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.subscribe-to-get-inf {
+  color: var(--dolphin);
+  font-family: var(--font-family-open_sans);
+  font-size: 33px;
+  font-weight: 600;
+  left: 1149px;
+  letter-spacing: 0;
+  line-height: 54px;
+  position: absolute;
+  text-align: center;
+  top: 1009px;
+}
+
+.group-77 {
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgb(50, 223, 143) 0%, rgb(0, 94.56, 20.8) 100%);
+  border-radius: 35px;
+  display: flex;
+  height: 70px;
+  justify-content: flex-end;
+  left: 2093px;
+  min-width: 70px;
+  padding: 11px 9.9px;
+  position: absolute;
+  top: 918px;
+}
+
+.send-2-1 {
+  height: 43px;
+  width: 45px;
+}
+
+.image-22 {
+  height: 536px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1228px;
+}
+
+.rectangle-11 {
+  background-color: var(--white);
+  box-shadow: 0px 4px 59px 9px #0000000d;
+  height: 250px;
+  left: 245px;
+  position: absolute;
+  top: 347px;
+  width: 738px;
+}
+
+.ellipse-30 {
+  height: 148px;
+  left: 540px;
+  position: absolute;
+  top: 264px;
+  width: 148px;
+}
+
+.outbound {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  left: 2018px;
+  min-height: 1374px;
+  position: absolute;
+  top: 341px;
+  width: 301px;
+}
+
+.social {
+  height: 1243px;
+  margin-left: -7.19px;
+  width: 269px;
+}
+
+.discover {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-height: 107px;
+  width: 303px;
+}
+
+.discover-our-app {
+  color: var(--dolphin);
+  font-family: var(--font-family-open_sans);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  letter-spacing: 0.10px;
+  line-height: 24.9px;
+  margin-left: 2.81px;
+  min-height: 35px;
+  width: 243px;
+}
+
+.play-container {
+  gap: 10px;
+  margin-left: 0;
+  min-width: 301px;
+}
+
+.google-play {
+  align-items: flex-start;
+  background-color: var(--cod-gray);
+  border-radius: 17.5px;
+  display: flex;
+  gap: 7px;
+  height: 49px;
+  justify-content: flex-end;
+  min-width: 150px;
+  padding: 9.8px 15.6px;
+}
+
+.google-play-1 {
+  height: 28px;
+  width: 28px;
+}
+
+.vector-1 {
+  align-self: center;
+  height: 21px;
+  margin-bottom: 2.28px;
+  width: 75px;
+}
+
+.play-store {
+  background-color: var(--cod-gray);
+  border-radius: 17.5px;
+  gap: 8px;
+  height: 49px;
+  justify-content: flex-end;
+  min-width: 141px;
+  padding: 11.2px 13.4px;
+}
+
+.apple-2-1 {
+  height: 22px;
+  width: 18px;
+}
+
+.vector-2 {
+  align-self: center;
+  height: 24px;
+  margin-bottom: 0.53px;
+  width: 77px;
+}
+
+.book-your-trip-in-mi {
+  color: var(--dolphin);
+  font-family: var(--font-family-open_sans);
+  font-size: 13px;
+  font-weight: 600;
+  left: 829px;
+  letter-spacing: 0;
+  line-height: 16.2px;
+  position: absolute;
+  top: 1598px;
+  width: 291px;
+}
+
+.nav-columns {
+  height: 215px;
+  left: 1237px;
+  min-width: 666px;
+  position: absolute;
+  top: 1509px;
+}
+
+.nav-row {
+  flex-direction: column;
+  min-height: 212px;
+  width: 160px;
+}
+
+.company {
+  letter-spacing: 0;
+  line-height: 26.1px;
+  min-height: 37px;
+  width: 152px;
+}
+
+.about {
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-left: 0;
+  margin-top: 48px;
+  min-height: 31px;
+  width: 77px;
+}
+
+.careers {
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-left: 0;
+  margin-top: 17px;
+  min-height: 31px;
+  width: 101px;
+}
+
+.nav-row-1 {
+  margin-left: 93px;
+  min-height: 212px;
+  width: 133px;
+}
+
+.helpfaq {
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-left: 0;
+  margin-top: 45px;
+  min-height: 31px;
+  width: 121px;
+}
+
+.press {
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-left: 0;
+  margin-top: 20px;
+  min-height: 31px;
+  width: 67px;
+}
+
+.affilates {
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-left: 0;
+  margin-top: 18px;
+  min-height: 31px;
+  width: 104px;
+}
+
+.nav-row-2 {
+  margin-left: 120px;
+  min-height: 215px;
+  width: 168px;
+}
+
+.airlinefees {
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-left: 0;
+  margin-top: 48px;
+  min-height: 31px;
+  width: 134px;
+}
+
+.airline {
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-left: 0;
+  margin-top: 20px;
+  min-height: 31px;
+  width: 80px;
+}
+
+.low-fare-tips {
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-left: 0;
+  margin-top: 18px;
+  min-height: 31px;
+  width: 160px;
+}
+
+.nav {
+  align-items: flex-start;
+  display: flex;
+}
+
+.nav-row-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.play {
+  align-items: flex-start;
+  display: flex;
+}
+
+.text-container-3 {
+  align-items: flex-start;
+  display: flex;
+  height: 26px;
+}

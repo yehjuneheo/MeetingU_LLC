@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,700,600,800,700italic,400italic,800italic");
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100vh;
+    width: 100%;
+}
+
+.register-main {
+    align-items: flex-start;
+    background-color: var(--black-2);
+    background-image: url("background2.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    border: 1px none;
+    display: flex;
+    gap: 10px;
+    padding: 103px 377px;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.frame-36 {
+    align-items: center;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+    padding: 50px;
+    width: fit-content
+}
+
+.frame-3 {
+    height: 124px;
+    min-width: 506px;
+}
+
+.flex-col {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 125px;
+    position: relative;
+    top: -1px;
+    width: 506px;
+}
+
+.become-a-mentor {
+    letter-spacing: 0.6px;
+    line-height: normal;
+    margin-right: 2px;
+    min-height: 27px;
+    min-width: 392px;
+    text-align: center;
+}
+
+.line {
+    height: 2px;
+    margin-top: 15px;
+    width: 506px;
+}
+
+.frame-35 {
+    height: 23px;
+    min-width: 400px;
+    position: relative;
+}
+
+.already-have-an-account {
+    color: var(--black);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-l2);
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0.51px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+}
+
+.login-now {
+    color: #1511e7;
+    cursor: pointer;
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-l2);
+    font-weight: 600;
+    left: 236px;
+    letter-spacing: 0.51px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    text-decoration: underline;
+    top: -1px;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.looking-for-mentor {
+    letter-spacing: 0.6px;
+    line-height: normal;
+    margin-left: 3px;
+    min-height: 27px;
+    min-width: 435px;
+    text-align: center;
+}
+
+.frame-31 {
+    align-items: flex-start;
+    background-color: var(--cinnabar);
+    border-radius: 30px;
+    border-width: 0px;
+    box-shadow: 4px 4px 8px #00000080;
+    display: flex;
+    height: 59px;
+    justify-content: flex-end;
+    margin-left: 1px;
+    margin-top: 22px;
+    min-width: 273px;
+    padding: 10px 23px;
+    cursor: pointer;
+    letter-spacing: 1.1px;
+    text-align: center;
+}
+
+.frame-31:hover {
+    background-color: var(--cinnabar2);
+}

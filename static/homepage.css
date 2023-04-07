@@ -1,0 +1,521 @@
+/* screen - homepage */
+
+.homepage {
+  align-items: center;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 4351px;
+  overflow: hidden;
+  width: 1728px;
+}
+
+.homepage .overlap-group4 {
+  height: 1336px;
+  margin-left: 1.0px;
+  margin-top: -13px;
+  position: relative;
+  width: 1729px;
+}
+
+.homepage .stefan-stefancik-6wh {
+  height: 1176px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 13px;
+  width: 1727px;
+}
+
+.homepage .rectangle-3 {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.81) 0%, rgba(72.09, 72.09, 72.09, 0) 31.25%, rgba(157.51, 157.51, 157.51, 0) 77.6%, rgb(255, 255, 255) 85.42%);
+  height: 1336px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1729px;
+}
+
+.homepage .menus {
+  align-items: flex-start;
+  display: flex;
+  gap: 76px;
+  height: 27px;
+  left: 673px;
+  min-width: 364px;
+  position: absolute;
+  top: 71px;
+}
+
+.homepage .place {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 27px;
+  min-width: 58px;
+}
+
+.homepage .about-us {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 27px;
+  min-width: 89px;
+}
+
+.homepage .log-in {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 27px;
+}
+
+.homepage .icon-star {
+  height: 36px;
+  left: 1466px;
+  position: absolute;
+  top: 66px;
+  width: 36px;
+}
+
+.homepage .healthiconsui-user-profile-outline {
+  height: 48px;
+  left: 1536px;
+  position: absolute;
+  top: 60px;
+  width: 48px;
+}
+
+.homepage .title {
+  color: var(--white);
+  font-family: var(--font-family-open_sans);
+  font-size: 75px;
+  font-weight: 800;
+  left: 378px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 478px;
+}
+
+.homepage .get-to-talk-and-ask {
+  color: var(--white);
+  font-family: var(--font-family-open_sans);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  left: 597px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 739px;
+}
+
+.homepage .rectangle-1 {
+  background-color: var(--green-haze);
+  border-radius: 10px;
+  height: 60px;
+  left: 758px;
+  position: absolute;
+  top: 823px;
+  width: 214px;
+}
+
+.homepage .sign-up {
+  color: var(--white);
+  font-family: var(--font-family-open_sans);
+  font-size: var(--font-size-xxxxl);
+  font-weight: 600;
+  left: 820px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 835px;
+}
+
+.homepage .our-service {
+  left: 749px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 1260px;
+}
+
+.homepage .meeting-u {
+  left: 126px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+  position: absolute;
+  text-align: center;
+  top: 43px;
+}
+
+.homepage .overlap-group-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 95px;
+  height: 232px;
+  margin-top: 42px;
+  min-width: 1438px;
+}
+
+.homepage .overlap-group5 {
+  align-items: flex-start;
+  background-color: var(--hint-of-red);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 232px;
+  padding: 21px 38px;
+  width: 416px;
+}
+
+.homepage .overlap-group10 {
+  align-items: flex-start;
+  background-image: url(../img/vector.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 27px;
+  justify-content: flex-end;
+  margin-top: 23px;
+  min-width: 46px;
+  padding: 9.1px 14px;
+}
+
+.homepage .university-consulting {
+  margin-top: 44px;
+  min-width: 258px;
+}
+
+.homepage .we-help-high-school {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 19px;
+  min-height: 44px;
+}
+
+.homepage .overlap-group6 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0px 4px 16px #00000026;
+  display: flex;
+  flex-direction: column;
+  min-height: 232px;
+  padding: 21px;
+  width: 416px;
+}
+
+.homepage .carbonhotel {
+  height: 45px;
+  margin-left: 27px;
+  margin-top: 14px;
+  width: 45px;
+}
+
+.homepage .student-to-student {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 25px;
+  margin-top: 35px;
+  min-height: 33px;
+  min-width: 228px;
+  text-align: center;
+}
+
+.homepage .you-can-easily-reser {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 19px;
+  min-height: 44px;
+  min-width: 349px;
+}
+
+.homepage .overlap-group8 {
+  align-items: flex-start;
+  background-color: var(--hint-of-red);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 232px;
+  padding: 21px 45px;
+  width: 416px;
+}
+
+.homepage .icon-paper_plane {
+  height: 41px;
+  margin-top: 18px;
+  width: 41px;
+}
+
+.homepage .university-planning {
+  margin-left: 3px;
+  margin-top: 35px;
+  min-width: 235px;
+}
+
+.homepage .we-provide-you-the-b {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 19px;
+  min-height: 44px;
+}
+
+.homepage .overlap-group7 {
+  background-color: #0058520d;
+  height: 733px;
+  margin-right: 9.0px;
+  margin-top: 88px;
+  position: relative;
+  width: 1751px;
+}
+
+.homepage .we-have-the-best-col {
+  left: 540px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 42px;
+}
+
+.homepage .we-always-try-to-mak {
+  left: 632px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 169px;
+}
+
+.homepage .overlap-group11 {
+  align-self: flex-start;
+  height: 1724px;
+  margin-left: -688px;
+  position: relative;
+  width: 3130px;
+}
+
+.homepage .overlap-group9 {
+  height: 1715px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3130px;
+}
+
+.homepage .text-13 {
+  color: #ff7152;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+}
+
+.homepage .text-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+}
+
+.homepage .text-5 {
+  color: #6246e5;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+  min-width: 13px;
+}
+
+.homepage .text-7 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 57px;
+  min-height: 26px;
+  min-width: 13px;
+}
+
+.homepage .text-12 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 22px;
+  min-height: 26px;
+  min-width: 13px;
+}
+
+.homepage .text-17 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 22px;
+  min-height: 26px;
+}
+
+.homepage .overlap-group {
+  height: 407px;
+  left: 886px;
+  position: absolute;
+  top: 931px;
+  width: 1257px;
+}
+
+.homepage .group-42 {
+  height: 274px;
+  width: 202px;
+}
+
+.homepage .overlap-group1 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  gap: 14px;
+  height: 68px;
+  left: 1225px;
+  min-width: 421px;
+  padding: 0 31px;
+  position: absolute;
+  top: 1192px;
+}
+
+.homepage .overlap-group-1 {
+  border-radius: 5px;
+  height: 18px;
+  position: relative;
+  width: 21px;
+}
+
+.homepage .overlap-group2 {
+  align-items: flex-start;
+  background-color: var(--green-haze);
+  border-radius: 10px;
+  display: flex;
+  height: 68px;
+  left: 1670px;
+  min-width: 180px;
+  padding: 22px 50px;
+  position: absolute;
+  top: 1192px;
+}
+
+.homepage .group-591 {
+  align-items: center;
+  display: flex;
+  gap: 125px;
+  height: 597px;
+  left: 0;
+  min-width: 3130px;
+  padding: 0 688px;
+  position: absolute;
+  top: 175px;
+}
+
+.homepage .image-30 {
+  height: 446px;
+  margin-bottom: 61.0px;
+  object-fit: cover;
+  width: 137px;
+}
+
+.homepage .overlap-group3 {
+  height: 597px;
+  position: relative;
+  width: 1228px;
+}
+
+.homepage .lorem-ipsum-dolor-si {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  left: 344px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 428px;
+  width: 541px;
+}
+
+.homepage .image-29 {
+  height: 446px;
+  margin-bottom: 61.0px;
+  object-fit: cover;
+  width: 113px;
+}
+
+.homepage .sammy-song {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxxl);
+  font-weight: 600;
+  left: 1493px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 720px;
+}
+
+.homepage .place-1 {
+  letter-spacing: 0;
+  line-height: 22.4px;
+  margin-left: 0;
+  margin-top: 18px;
+  min-height: 31px;
+  width: 86px;
+}
+
+.homepage .place-2 {
+  letter-spacing: 0;
+  line-height: 26.1px;
+  margin-left: 1.41px;
+  min-height: 37px;
+  width: 124px;
+}
+
+.homepage .place-3 {
+  letter-spacing: 0;
+  line-height: 26.1px;
+  min-height: 37px;
+  width: 77px;
+}
+
+.homepage .meeting-u-1 {
+  color: var(--black);
+  font-family: var(--font-family-laila);
+  font-size: 32px;
+  font-weight: 700;
+  left: 870px;
+  letter-spacing: 0;
+  line-height: 32.8px;
+  position: absolute;
+  text-align: center;
+  top: 1505px;
+  width: 129px;
+}
+
+.homepage .copyrights {
+  color: var(--dolphin);
+  font-family: var(--font-family-open_sans);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 17.4px;
+  margin-left: 23.35px;
+  margin-top: 117px;
+  min-height: 24px;
+  width: 285px;
+}
+
+.homepage .university {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 33px;
+  text-align: center;
+}

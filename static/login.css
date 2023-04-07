@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,700,600,800,700italic,400italic,800italic");
+.body {
+    height: 100vh;
+    width: 100%;
+}
+
+.login {
+    align-items: flex-start;
+    background-color: var(--black-2);
+    background-image: url("background2.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    border: 1px none;
+    display: flex;
+    gap: 10px;
+    padding: 83px 377px;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.frame-30 {
+    align-items: center;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    width: fit-content;
+}
+
+.frame-29 {
+    align-items: flex-start;
+    display: flex;
+    gap: 12px;
+    width: fit-content;
+}
+
+.register-now {
+    color: var(--unmellow-yellow);
+    cursor: pointer;
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-l2);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    text-decoration: underline;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.dont-have-an-account {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    width: fit-content;
+}
+
+.frame-25 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: fit-content;
+}
+
+.line-3 {
+    height: 2px;
+    min-width: 585px;
+}
+
+.title {
+    color: var(--black);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xxxxl2);
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    width: fit-content;
+}
+
+.frame-27 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.forgot {
+    letter-spacing: 0.42px;
+    line-height: normal;
+    text-align: center;
+    text-decoration: underline;
+    width: fit-content;
+}
+
+.rectangle-1 {
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: var(--black-2);
+    border-radius: 5px;
+    height: 40px;
+    min-width: 400px;
+}
+
+.password {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    width: fit-content;
+}
+
+.frame-28 {
+    align-items: flex-start;
+    background-color: var(--green-haze);
+    border-radius: 20px;
+    border-width: 0px;
+    box-shadow: 4px 4px 4px #00000080;
+    display: flex;
+    gap: 10px;
+    padding: 10px 56px;
+    width: fit-content;
+    cursor: pointer;
+    color: var(--white);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xl2);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.frame-28:hover {
+    background-color: var(--green-haze2);
+}
+
+.frame-26 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+.username {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+h5 {
+    text-align: center;
+    color: red;
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-l2);
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.frame-100 {
+    justify-content: center;
+    display: flex;
+}

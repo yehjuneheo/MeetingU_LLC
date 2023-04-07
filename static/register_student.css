@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,700,600,800,700italic,400italic,800italic");
+.body {
+    height: 100vh;
+    width: 100%;
+}
+
+.register-student {
+    align-items: flex-start;
+    background-color: var(--black-2);
+    background-image: url("background2.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    border: 1px none;
+    display: flex;
+    gap: 10px;
+    padding: 103px 377px;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.frame-47 {
+    align-items: center;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding: 50px;
+    width: fit-content;
+}
+
+.frame-37 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 5px
+}
+
+.line-3 {
+    height: 2px;
+    min-width: 585px;
+}
+
+.title {
+    color: var(--black);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xxxxl2);
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    width: fit-content;
+}
+
+.frame-46 {
+    align-items: flex-start;
+    display: flex;
+    gap: 13px;
+    width: fit-content;
+}
+
+.already-have-an-account {
+    letter-spacing: 0.51px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    width: fit-content;
+}
+
+.login-now {
+    color: #1511e7;
+    cursor: pointer;
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-l2);
+    font-weight: 600;
+    letter-spacing: 0.51px;
+    line-height: normal;
+    margin-top: -1px;
+    text-align: center;
+    text-decoration: underline;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.frame {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: fit-content;
+}
+
+.frame-a {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: fit-content;
+    margin-bottom: 35px;
+}
+
+.rectangle {
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: var(--black-2);
+    border-radius: 5px;
+    height: 40px;
+    min-width: 400px;
+    margin-bottom: 35px;
+    padding-left: 8px;
+}
+
+.email {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+}
+
+.frame-44 {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    width: fit-content
+}
+
+.setup-payment-method {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content
+}
+
+.first-name {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content
+}
+
+.last-name {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content
+}
+
+.username {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content
+}
+
+.reenter-password {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content
+}
+
+.password {
+    letter-spacing: 0.5px;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content
+}
+
+.frame-45 {
+    align-items: flex-start;
+    background-color: var(--cinnabar);
+    border-radius: 30px;
+    box-shadow: 4px 4px 8px #00000080;
+    display: flex;
+    gap: 10px;
+    padding: 11px 23px;
+    width: fit-content;
+    color: var(--white);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xxl2);
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    line-height: normal;
+    text-align: center;
+    cursor: pointer;
+    border-width: 0px;
+}
+
+.frame-45:hover {
+    background-color: var(--cinnabar2);
+}
+
+h5 {
+    text-align: center;
+    color: red;
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-l2);
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.frame-100 {
+    justify-content: center;
+    display: flex;
+}

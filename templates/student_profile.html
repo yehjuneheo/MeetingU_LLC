@@ -1,0 +1,9 @@
+<div class="prof">  
+    <h3 style="color:blue;">{{my_profile.name}}</h3>
+    <h4>{{my_profile.university}}</h4>
+    <h4>{{my_profile.major}}</h4>
+
+    <input type="submit" value = "See my meetings" onclick="location.href='{% url 'student_meetings' user.id %}'" />
+</div>
+
+<input type="submit" value = "Logout" onclick="location.href='{% url 'logout_view' %}'" />
